@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Aplicación web para personalizar la apariencia de la página mediante cookies.">
+
+    <title>Personalización de interfaz</title>
+
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="estilos.css">
+
+    <!-- Archivo JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Personaliza tu experiencia</h1>
+        <p>Configura el aspecto visual de esta página a tu gusto.</p>
+    </header>
+
+    <main>
+
+        <!-- Contenedor para el mensaje de bienvenida dinámico -->
+        <section id="contenedor-bienvenida">
+        </section>
+
+        <!-- Formulario de personalización -->
+        <section>
+            <h2>Configuración de la interfaz</h2>
+
+            <form id="formulario-preferencias">
+
+                <!-- Nombre de usuario -->
+                <div>
+                    <label for="nombre-usuario">
+                        Nombre de usuario:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre-usuario"
+                        name="nombre"
+                        placeholder="Introduce tu nombre"
+                        required
+                    >
+                </div>
+
+                <!-- Selector de color -->
+                <div>
+                    <label for="color-fondo">
+                        Color de fondo:
+                    </label>
+
+                    <input
+                        type="color"
+                        id="color-fondo"
+                        name="color"
+                        value="#ffffff"
+                    >
+                </div>
+
+                <!-- Selector de tema -->
+                <div>
+                    <label for="tema-visual">
+                        Tema visual:
+                    </label>
+
+                    <select id="tema-visual" name="tema">
+                        <option value="claro">Modo claro</option>
+                        <option value="oscuro">Modo oscuro</option>
+                    </select>
+                </div>
+
+                <!-- Botones de configuración -->
+                <div>
+                    <button type="button" id="guardar-preferencias">
+                        Guardar preferencias
+                    </button>
+
+                    <button type="button" id="restablecer-interfaz">
+                        Restablecer interfaz
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Actividad de JavaScript - Personalización mediante cookies</p>
+    </footer>
+
+</body>
+</html>
