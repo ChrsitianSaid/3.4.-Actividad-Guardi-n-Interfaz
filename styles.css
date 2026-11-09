@@ -1,0 +1,180 @@
+/* configuracion general */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* cuerpo pagina */
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    padding: 40px;
+    transition: background-color 0,3s, color 0,3s;
+}
+
+/* estructura principal */
+
+header,
+main,
+footer {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* encabezado */
+
+header {
+    text-aligen: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+/* contenedor principal*/
+
+main {
+    padding: 30px;
+    border-radius: 12px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/*formulario*/
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/*campos formularios*/
+
+input, 
+select,
+button {
+    font-family: inherit;
+    font-size: 16xp;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+input,
+select {
+    border: 1px solid #cccccc;
+}
+
+input [type="color"] {
+    width: 100px;
+    height: 45px;
+    cursor: pointer;
+}
+
+/*  tema claro*/
+
+.tema-claro {
+    background-color: #f2f4f8;
+    color: #222222;
+}
+
+.tema-claro main {
+    background-color: #ffffff;
+}
+
+.tema-claro input,
+.tema-claro select {
+    background-color: #ffffff;
+    color: #222222;
+}
+
+/* tema oscuro*/
+
+.tema-oscuro{
+    background-color: #121826;
+    color: #f1f5f9;
+}
+
+.tema-oscuro main {
+    background-color: #1e293b;
+}
+
+.tema-oscuro input,
+.tema-oscuro select {
+    background-color:  #334155;
+    color: #ffffff;
+    border-color: #475569;
+}
+
+/* botones*/
+
+.contenedor-botones{
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap
+}
+
+button {
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+#guardar-preferencias {
+    background-color: #16a34a;
+}
+
+#restablecer-interfaz {
+    background-color: #dc2626;
+}
+
+/*bienvenida y pie de pagina*/
+
+#contenedor-bienvenida {
+    margin-bottom: 25px;
+}
+
+footer {
+    text-align: center;
+    margin-top:25px ;
+    font-size: 14px;    
+}
+
+/* diseño responsive */
+
+@media (max-width: 600px){
+
+    body {
+        padding: 15px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    .contenedor-botones {
+        flex-direction:column;
+    }
+}
