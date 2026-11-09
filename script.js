@@ -39,6 +39,10 @@ function cambiarTema() {
 
 };
 
+/**
+ * Genera dinámicamente el mensaje de bienvenida en el DOM.
+ * @param {string} nombre - Nombre del usuario.
+ */
 function mostrarBienvenida(nombre) {
     const titulo = document.createElement("h2");
     const mensaje = document.createElement("p");
@@ -72,6 +76,9 @@ function guardarPreferencias() {
     mostrarBienvenida(nombre);
 };
 
+/**
+ * Valida y guarda las preferencias del usuario y actualiza el mensaje de bienvenida.
+ */
 function guardarCookie(nombre, valor, dias){
     const fecha = new Date();
 
@@ -80,6 +87,11 @@ function guardarCookie(nombre, valor, dias){
     document.cookie= nombre + "=" + encodeURIComponent(valor) + "; expires=" + fecha.toUTCString() + "; path=/";
 };
 
+/**
+ * Busca una cookie por su nombre y devuelve su valor decodificado.
+ * @param {string} nombre - Nombre de la cookie que se desea buscar.
+ * @returns {string|null} Valor de la cookie o null si no existe.
+ */
 function leerCookie(nombre){
     const cookies = document.cookie.split("; ");
 
@@ -94,10 +106,20 @@ function leerCookie(nombre){
     return null;
 };
 
+/**
+ * Elimina una cookie estableciendo una fecha de expiración anterior a la actual.
+ * @param {string} nombre - Nombre de la cookie que se desea eliminar.
+ */
 function borrarCookie(nombre){
-    document.cookie = nombre +  "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/" // con esto la cookie caduca de forma inmediata al ser una fecha inmediata.
+    document.cookie = nombre +  "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/" 
 };
 
+/**
+ * Guarda una cookie en el navegador con una fecha de expiración determinada.
+ * @param {string} nombre - Nombre de la cookie.
+ * @param {string} valor - Valor que se almacenará en la cookie.
+ * @param {number} dias - Número de días que permanecerá activa la cookie.
+ */
 function restablecerInterfaz(){
 
     borrarCookie("nombre");
@@ -115,6 +137,9 @@ function restablecerInterfaz(){
     contenedorBienvenida.innerHTML = "";
 };
 
+/**
+ * Recupera las preferencias guardadas en las cookies y las aplica a la interfaz.
+ */
 function cargarPreferencias(){
     const nombre = leerCookie("nombre");
     const color = leerCookie("color");
