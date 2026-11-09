@@ -12,7 +12,7 @@ body {
     font-family: Arial, sans-serif;
     min-height: 100vh;
     padding: 40px;
-    transition: background-color 0,3s, color 0,3s;
+    transition: background-color 0.3s, color 0,3s;
 }
 
 /* estructura principal */
@@ -20,14 +20,14 @@ body {
 header,
 main,
 footer {
-    max-width: 500px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
 /* encabezado */
 
 header {
-    text-aligen: center;
+    text-align: center;
     margin-bottom: 30px;
 }
 
@@ -68,7 +68,7 @@ input,
 select,
 button {
     font-family: inherit;
-    font-size: 16xp;
+    font-size: 16px;
     padding: 12px;
     border-radius: 6px;
 }
@@ -78,7 +78,7 @@ select {
     border: 1px solid #cccccc;
 }
 
-input [type="color"] {
+input[type="color"] {
     width: 100px;
     height: 45px;
     cursor: pointer;
@@ -124,7 +124,7 @@ input [type="color"] {
 .contenedor-botones{
     display: flex;
     gap: 12px;
-    flex-wrap: wrap
+    flex-wrap: wrap;
 }
 
 button {
